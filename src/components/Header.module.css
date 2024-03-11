@@ -1,0 +1,176 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    height: 65px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+    box-shadow: var(--bt-shadow);
+    font-family: 'Varela Round', sans-serif;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 2.7rem;
+    letter-spacing: 1.3px;
+    cursor: pointer;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.active {
+    color: var(--active);
+}
+
+.link {
+    letter-spacing: 0.8px;
+    color: var(--links);
+}
+
+.nav_btn {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    font-size: 1.25rem;
+}
+
+li a,
+h1 a {
+    color: var(--links);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+li a:hover,
+h1 a:hover,
+li>button:hover {
+    cursor: pointer;
+    color: var(--hover);
+}
+
+li > button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: var(--links);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+    background-color: transparent;
+}
+
+@media (max-width: 767px) {
+
+    .header{
+        padding: 0 20px;
+    }
+
+    .nav {
+        position: absolute;
+        top: -65px;
+        left: 0;
+        width: 100%;
+        z-index: -500;
+        visibility: hidden;
+    }
+
+    .nav_btn {
+        position: fixed;
+        right: 2rem;
+        width: 40px;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .ham {
+        display: block;
+        width: 90%;
+        height: 5px;
+        background-color: var(--links);
+        border-radius: 5px;
+        transition: 0.1s ease-in;
+    }
+
+    .nav_btn.openb .ham:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .nav_btn.openb .ham:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav_btn.openb .ham:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    .open {
+        opacity: 1;
+        animation: slideDown 0.5s;
+        animation-fill-mode: forwards;
+        transition: all 0.3s ease-in;
+        z-index: 100;
+        visibility: visible;
+    }
+
+    .closed {
+        opacity: 0;
+        animation: slideUp 0.5s;
+        animation-fill-mode: forwards;
+        transition: all 0.3s ease-in-out;
+        z-index: -100;
+        visibility: none;
+    }
+
+    .nav_links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        background-color: var(--bg);
+    }
+
+    @keyframes slideDown {
+        from {
+            top: -65px;
+            opacity: 0;
+        }
+
+        to {
+            top: 63px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            top: 66px;
+            opacity: 1;
+        }
+
+        to {
+            top: -65px;
+            opacity: 0;
+        }
+    }
+}

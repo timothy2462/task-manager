@@ -1,0 +1,216 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--d-width);
+    margin-top: 100px;
+    padding: 10px 25px;
+    border-radius: var(--bd-radius);
+    background-color: #eee;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.488);
+}
+
+.form>h1 {
+    margin: 20px 0 15px 0;
+    color: var(--h3);
+}
+
+.user h2 {
+    color: var(--h3);
+}
+
+.form>.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.input>input {
+    border: none;
+    width: 70%;
+    height: 100%;
+    background-color: #c3c3c3;
+    padding-left: 10px;
+    border-radius: var(--bd-radius) 0 0 var(--bd-radius);
+    color: rgb(67, 3, 127);
+}
+
+.input>input:focus {
+    font-weight: bolder;
+    outline: none;
+    border: none;
+}
+
+.input>button {
+    cursor: pointer;
+    border: none;
+    width: 30%;
+    height: 100%;
+    color: #e5e5e5;
+    background-color: blueviolet;
+    border-radius: 0 var(--bd-radius) var(--bd-radius) 0;
+    font-weight: bold;
+}
+
+.section,
+.user {
+    margin-top: 50px;
+}
+
+.list,
+.user {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    align-items: center;
+    background-color: #eee;
+    margin-bottom: 20px;
+    width: var(--d-width);
+    min-height: 3.5rem;
+    border-radius: var(--bd-radius);
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.488);
+    transition: 0.2s;
+    animation: fadeIn 0.5s ease-in;
+    color: #2f3268;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.list:hover {
+    transform: scale(1.01);
+}
+
+.list>p {
+    font-size: 1rem;
+}
+
+.list>.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.list>.icons>.delete {
+    color: rgb(216, 54, 54);
+    transition: all 0.3s;
+}
+
+.list>.icons>.edit,
+.list>.icons>.checked {
+    color: rgb(60, 201, 60);
+    transition: all 0.3s;
+}
+
+.list>.icons>.edit:hover,
+.list>.icons>.checked:hover,
+.list>.icons>.delete:hover {
+    transform: scale(1.1);
+}
+
+.in_link_parent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.in_link {
+    cursor: pointer;
+    color: var(--links);
+}
+
+.errMsg {
+    color: red;
+    font-weight: bold;
+    font-size: 0.7rem;
+    animation: shaker 0.2s;
+}
+
+.successMsg {
+    color: rgb(60, 201, 60);
+    font-weight: bold;
+    font-size: 0.7rem;
+    animation: fadeIn 0.5s;
+}
+
+.strikeThrough {
+    text-decoration: line-through;
+}
+
+@media (max-width: 767px) {
+    .form {
+        margin-top: 30px;
+    }
+}
+
+@keyframes shaker {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

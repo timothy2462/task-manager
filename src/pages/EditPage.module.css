@@ -1,0 +1,112 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--d-width);
+    margin-top: 100px;
+    padding: 10px 5px;
+    border-radius: var(--bd-radius);
+    background-color: #f0f0f0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.488);
+}
+
+.form>h1 {
+    margin: 20px 0 30px 0;
+    color: var(--h3);
+}
+
+.form>.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.form>.inputs>.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.6rem 0rem;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.wrapper>label {
+    min-width: 100px;
+}
+
+.wrapper>input {
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 70%;
+    padding-left: 0.8rem;
+    margin-left: 1rem;
+}
+
+.wrapper>input.task {
+    background-color: transparent;
+}
+
+.wrapper>input.name {
+    background-color: rgb(227, 227, 227);
+}
+
+.wrapper>input.checked {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border: 1px solid red;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btns>.edit {
+    cursor: pointer;
+    width: 35%;
+    height: 35px;
+    outline: none;
+    border: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    border-radius: var(--bd-radius);
+    background-color: blueviolet;
+    transition: all 0.25s;
+}
+
+.btns>.back {
+    cursor: pointer;
+    width: 50%;
+    height: 35px;
+    outline: none;
+    border: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    border-radius: var(--bd-radius);
+    border: 1px solid blueviolet;
+    background-color: #f0f0f0;
+    color: blueviolet;
+    transition: all 0.25s;
+}
+
+.btns>.edit:hover {
+    border: 1px solid blueviolet;
+    background-color: #f0f0f0;
+    color: blueviolet;
+}
+
+.btns>.back:hover {
+    border: 1px solid #f0f0f0;
+    background-color: blueviolet;
+    color: #f0f0f0;
+}

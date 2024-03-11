@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&family=Roboto:wght@100;300;400;500;700&family=Rubik:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&family=Varela+Round&display=swap');
+
+:root {
+  --bg: rgb(213, 213, 213);
+  --hover: #7700ff;
+  --links: #5d00c0;
+  --active: rgb(165, 69, 255);
+  --bt-shadow: 0px 0px 7px 0px black;
+  --d-width: 90vw;
+  --bd-radius: 8px;
+  --h3: rgb(165, 69, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 767px) {
+  :root {
+    --d-width: 650px;
+  }
+}

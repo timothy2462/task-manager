@@ -1,0 +1,190 @@
+.recover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--d-width);
+    margin-top: 100px;
+    padding: 50px 30px;
+    border-radius: 5px;
+    background-color: #eee;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.488);
+
+}
+
+.form>h5 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: var(--h3);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 60%;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #c3c3c3;
+    border-radius: var(--bd-radius);
+}
+
+.input:hover,
+.input:focus {
+    outline: 2px solid var(--links);
+}
+
+.input input {
+    cursor: pointer;
+    color: var(--links);
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: var(--bd-radius);
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+
+.input input:focus+label,
+.input input:valid+label {
+    background-color: transparent;
+    top: -15px;
+    font-size: 0.7rem;
+}
+
+.input input:hover,
+.input input:focus {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.input label {
+    font-size: 0.9rem;
+    color: var(--links);
+    position: absolute;
+    top: 9.5px;
+    left: 10px;
+    transition: all 0.3s ease;
+}
+
+.form>button {
+    cursor: pointer;
+    padding: 10px 15px;
+    color: blueviolet;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border-radius: var(--bd-radius);
+    border: 1px solid blueviolet;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.form>button:hover {
+    background-color: blueviolet;
+    color: #eee;
+}
+
+.success {
+    text-align: center;
+    color: green;
+    animation: fadeIn 1s;
+    transition: all 0.3s ease;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    animation: shaker 0.2s;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 767px) {
+
+    .form>h5 {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        margin-top: 40px;
+    }
+
+    .input {
+        width: 100%;
+    }
+}
+
+@keyframes shaker {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
